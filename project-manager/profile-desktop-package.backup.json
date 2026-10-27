@@ -1,0 +1,42 @@
+{
+  "name": "dsh-profile-desktop",
+  "private": true,
+  "dependencies": {
+    "@dsh-pet/bridge": "link:C:/Users/kcx2008/AppData/Local/Programs/dsh-pet-standalone-webm-chat/_internal/integrations/dsh-pet-bridge",
+    "@local/dsh-ask-always": "link:C:/Users/kcx2008/Documents/deepseek-harness/default-workspace/dsh-ask-always",
+    "@local/dsh-pause-resume": "link:C:/Users/kcx2008/Documents/deepseek-harness/default-workspace/dsh-pause-resume",
+    "@local/dsh-peak-guard": "link:C:/Users/kcx2008/Documents/deepseek-harness/default-workspace/dsh-peak-guard",
+    "@vectorize-io/hindsight-coding-agents": "0.8.2",
+    "billion-context": "0.1.206",
+    "dsh-comfyui": "link:C:/Users/kcx2008/Documents/deepseek-harness/default-workspace/dsh-comfyui",
+    "dsh-find-plugins": "0.2.10",
+    "dsh-ops": "0.4.1",
+    "dsh-thinking-levels": "^4.4.5",
+    "dsh-whale-widget": "^0.4.2",
+    "dshmarket": "^1.66.28",
+    "qq-agent-presets": "link:C:/Users/kcx2008/.dsh/plugins/qq-agent-presets",
+    "qq-mode-console": "link:C:/Users/kcx2008/.dsh/plugins/qq-mode-console"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "dshmarket",
+        "dsh-find-plugins",
+        "@dsh-pet/bridge",
+        "@local/dsh-peak-guard",
+        "dsh-whale-widget",
+        "@vectorize-io/hindsight-coding-agents",
+        "billion-context",
+        "dsh-comfyui",
+        "@local/dsh-pause-resume",
+        "@local/dsh-ask-always",
+        "dsh-ops",
+        "qq-mode-console",
+        "qq-agent-presets",
+        "dsh-thinking-levels"
+      ]
+    }
+  }
+}

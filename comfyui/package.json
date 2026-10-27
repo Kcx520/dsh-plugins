@@ -1,0 +1,24 @@
+{
+  "name": "dsh-comfyui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local ComfyUI bridge for DSH: Qwen-Image 2.1 text-to-image and MiniMax-H3 image-to-video as model tools.",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

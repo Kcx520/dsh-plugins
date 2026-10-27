@@ -1,0 +1,6 @@
+# dsh-ask-always: the "ask me anything, in detail" suffix is always in effect.
+- insert:
+    - id: ask-always
+      name: '@local/dsh-ask-always'
+      config:
+        enabled: true

@@ -1,0 +1,8 @@
+# dsh-project-manager: one folder per project, with a small file manager.
+- insert:
+    - id: project-manager
+      name: '@local/dsh-project-manager'
+      config:
+        enabled: true
+        root: 'C:/Users/kcx2008/Documents/deepseek-harness/default-workspace'
+        trashDir: .dsh-trash

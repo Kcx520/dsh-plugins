@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "API 高峰保护",
+    "description": "在 DeepSeek API 进入高峰计价前几分钟自动保存进度并暂停，说一句「继续」即可恢复工作。"
+  }
+}

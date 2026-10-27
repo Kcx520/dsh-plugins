@@ -1,0 +1,44 @@
+# dsh-comfyui: local ComfyUI (Qwen-Image 2.1 + MiniMax-H3) as DSH model tools.
+# Every model filename and default here is plain config — edit and restart the app.
+- insert:
+    - id: comfyui
+      name: dsh-comfyui
+      config:
+        baseUrl: http://127.0.0.1:8188
+        # Where generated images/videos are copied so the agent can read and show them.
+        outputDir: C:\Users\kcx2008\Documents\deepseek-harness\default-workspace\comfyui-output
+        pollMs: 2000
+        waitTimeoutSeconds: 900
+        # ComfyUI 没在跑时，用同一个启动脚本把它拉起来再生成
+        # （就是桌面上 run_nvidia_gpu.bat.lnk 指向的那个 .bat）。
+        startup:
+          enabled: true
+          bat: D:\kcx2008\ComfyUI\ComfyUI_windows_portable\run_nvidia_gpu.bat
+          workdir: D:\kcx2008\ComfyUI\ComfyUI_windows_portable
+          timeoutSeconds: 180
+        image:
+          unet: qwen_image_2.1_int8_convrot.safetensors
+          clip: qwen3vl_8b_int8_convrot.safetensors
+          vae: qwen_image_2.1_vae_bf16.safetensors
+          width: 1024
+          height: 1024
+          steps: 25
+          cfg: 1
+          sampler: euler
+          scheduler: simple
+          resolution: 1024
+        video:
+          unet: minimax_h3_fl2va_pruned_int8_convrot.safetensors
+          clip: qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors
+          videoVae: minimax_h3_video_vae_fp16.safetensors
+          audioVae: minimax_h3_audio_vae_fp32.safetensors
+          lora: minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors
+          turbo: true
+          turboSteps: 8
+          fullSteps: 20
+          sampler: res_multistep
+          scheduler: simple
+          width: 1344
+          height: 768
+          seconds: 5
+          fps: 24

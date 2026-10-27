@@ -1,0 +1,8 @@
+# dsh-pause-resume: one button to pause with a breakpoint and resume later.
+- insert:
+    - id: pause-resume
+      name: '@local/dsh-pause-resume'
+      config:
+        enabled: true
+        progressFile: .dsh-progress.md
+        stateFile: .dsh-pause.json
