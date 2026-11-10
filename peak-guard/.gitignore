@@ -1,0 +1,6 @@
+node_modules/
+dist/
+share/
+*.tgz
+.peak-guard-drill.json
+PEAK_HANDOFF.md

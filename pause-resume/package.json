@@ -1,0 +1,28 @@
+{
+  "name": "@local/dsh-pause-resume",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One-button pause/resume for DeepSeek Harness: save a breakpoint, stop, and continue from it later (even after a restart).",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@local/dsh-ask-always",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Append \"ask me anything, in detail\" to the meaning of every user message: the agent asks before guessing.",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
